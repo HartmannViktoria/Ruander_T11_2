@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.feladat</title>
+</head>
+
+<body>
+
+    <input type="text" id="mezo">
+    <p>A beírt karakterek száma: <span id="karakterekSzama">0</span></p>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#mezo").on("keyup", function () {
+                var karakterSzamlalo = $(this).val().length;
+                $("#karakterekSzama").text(karakterSzamlalo);
+            });
+        });
+    </script>
+</body>
+
+</html>

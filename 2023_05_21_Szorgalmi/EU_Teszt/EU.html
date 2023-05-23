@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>EU teszt</title>
+</head>
+
+<body>
+    <table id="testTable" class="table table-sm table-striped table-dark table-hover">
+        <thead>
+            <tr>
+                <td>Teszt neve</td>
+                <td>Input adat</td>
+                <td>Elvárt eredmény</td>
+                <td>Végeredmény</td>
+                <td>Sikeresség</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        //Ide illessze be a JavasScript kódot a teszteléshez
+
+        var EuropaiUnio = [{
+            orszag: "Ausztria",
+            csatlakozas: "1995.01.01"
+        },
+        {
+            orszag: "Belgium",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Bulgária",
+            csatlakozas: "2007.01.01"
+        },
+        {
+            orszag: "Ciprus",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Csehország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Dánia",
+            csatlakozas: "1973.01.01"
+        },
+        {
+            orszag: "Észtország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Finnország",
+            csatlakozas: "1995.01.01"
+        },
+        {
+            orszag: "Franciaország",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Görögország",
+            csatlakozas: "1981.01.01"
+        },
+        {
+            orszag: "Hollandia",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Horvátország",
+            csatlakozas: "2013.07.01"
+        },
+        {
+            orszag: "Írország",
+            csatlakozas: "1973.01.01"
+        },
+        {
+            orszag: "Lengyelország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Lettország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Litvánia",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Luxemburg",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Magyarország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Málta",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Németország",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Olaszország",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Portugália",
+            csatlakozas: "1986.01.01"
+        },
+        {
+            orszag: "Románia",
+            csatlakozas: "2007.01.01"
+        },
+        {
+            orszag: "Spanyolország",
+            csatlakozas: "1986.01.01"
+        },
+        {
+            orszag: "Svédország",
+            csatlakozas: "1995.01.01"
+        },
+        {
+            orszag: "Szlovákia",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Szlovénia",
+            csatlakozas: "2004.05.01"
+        }
+        ];
+        //3.feladat: Hány tagja van az EU-nak?
+        function TagokSzama(EuropaiUnio) {
+            return EuropaiUnio.length;
+        }
+        console.log("3. feladat: Az EU tagjainak sz\u00E1ma: ".concat(TagokSzama(EuropaiUnio), " db."));
+        //4. feladat: Hány ország csatlakozott 2007-ben?
+        function CsatlakozottK7(EuropaiUnio) {
+            var K7 = 0;
+            for (var i = 0; i < EuropaiUnio.length; i++) {
+                if (EuropaiUnio[i].csatlakozas.indexOf("2007") !== -1) {
+                    K7++;
+                }
+            }
+            return K7;
+        }
+        console.log("4. feladat: 2007-ben ".concat(CsatlakozottK7(EuropaiUnio), " orsz\u00E1g csatlakozott."));
+        //5.feladat: Csatlakozott-e Magyarország az unióhoz?
+        function CsatlakozottE(EuropaiUnio) {
+            for (var i = 0; i < EuropaiUnio.length; i++) {
+                if (EuropaiUnio[i].orszag == "Magyarország") {
+                    return "igen";
+                }
+            }
+            return "nem";
+        }
+        console.log("5. Magyarorsz\u00E1g csatlakozott-e az EU-hoz? ".concat(CsatlakozottE(EuropaiUnio)));
+        //6. feladat: Volt-e májusi csatlakozás?
+        function MajusiCsatlakozas(EuropaiUnio) {
+            for (var i = 0; i < EuropaiUnio.length; i++) {
+                if (EuropaiUnio[i].csatlakozas.indexOf(".05.") !== -1) {
+                    return "igen";
+                }
+            }
+            return "nem";
+        }
+        console.log("6. feladat: Volt m\u00E1jusi csatlakoz\u00E1s? ".concat(MajusiCsatlakozas(EuropaiUnio)));
+        //7. feladat: Ki volt a legutolsó csatlakozó?
+        function LegutolsoCsatlakozo(EuropaiUnio) {
+            var maxIndex = 0;
+            for (var i = 0; i < EuropaiUnio.length; i++) {
+                var aktIndexEv = Number(EuropaiUnio[i].csatlakozas.substring(0, 4));
+                var maxIndexEv = Number(EuropaiUnio[maxIndex].csatlakozas.substring(0, 4));
+                if (aktIndexEv > maxIndexEv) {
+                    maxIndex = i;
+                }
+            }
+            return EuropaiUnio[maxIndex];
+        }
+        var utolsoCsatlakozo = LegutolsoCsatlakozo(EuropaiUnio);
+        console.log("7. feladat: Ki volt az utols\u00F3 csatlakoz\u00F3? ".concat(utolsoCsatlakozo.orszag));
+        console.log("7. feladat: Az utols\u00F3 csatlakoz\u00E1s d\u00E1tuma: ".concat(utolsoCsatlakozo.csatlakozas));
+        //8. feladat: Hány ország csatlakozott egy adott évben?
+        function csatlakozottAdottEvUniverzalis(ev) {
+            var adottEvbenCsatlakozottakSzama = 0;
+            for (var i = 0; i < EuropaiUnio.length; i++) {
+                if (EuropaiUnio[i].csatlakozas.indexOf(ev.toString()) === 0) {
+                    adottEvbenCsatlakozottakSzama++;
+                }
+            }
+            return adottEvbenCsatlakozottakSzama;
+        }
+        console.log("8. feladat: A 2004-ben csatlakozott \u00E1llamok sz\u00E1ma: ".concat(csatlakozottAdottEvUniverzalis(2004)));
+        console.log("8. feladat: A 2002-ben csatlakozott \u00E1llamok sz\u00E1ma: ".concat(csatlakozottAdottEvUniverzalis(2002)));
+        console.log("8. feladat: A 2013-ben csatlakozott \u00E1llamok sz\u00E1ma: ".concat(csatlakozottAdottEvUniverzalis(2013)));
+        console.log("8. feladat: Az 1958-ben csatlakozott \u00E1llamok sz\u00E1ma: ".concat(csatlakozottAdottEvUniverzalis(1958)));
+        //9. feladat: Csatlakozott-e adott ország az EU-hoz?
+        function CsatlakozottEAdottOrszagUniverzalis(orszagNev) {
+            for (var i = 0; i < EuropaiUnio.length; i++) {
+                if (EuropaiUnio[i].orszag === orszagNev) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        console.log("9. feladat: " + (CsatlakozottEAdottOrszagUniverzalis("Franciaország") ? "Franciaország csatlakozott" : "Franciaország nem csatlakozott"));
+        console.log("9. feladat: " + (CsatlakozottEAdottOrszagUniverzalis("Zimbabwe") ? "Zimbabwe csatlakozott" : "Zimbabwe nem csatlakozott"));
+        console.log("9. feladat: " + (CsatlakozottEAdottOrszagUniverzalis("Anglia") ? "Anglia csatlakozott" : "Anglia nem csatlakozott"));
+        //10. feladat: Volt-e adott hónapban csatlakozás? Igen/Nem?
+        function AdottHonapbanVoltECsatlakozasUniverzalis(honapSzama) {
+            for (var i = 0; i < EuropaiUnio.length; i++) {
+                if (EuropaiUnio[i].csatlakozas.slice(5, 7) === honapSzama) {
+                    return "igen";
+                }
+            }
+            return "nem";
+        }
+        console.log("10. feladat: Volt csatlakoz\u00E1s 01.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("01")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 02.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("02")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 03.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("03")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 04.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("04")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 05.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("05")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 06.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("06")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 07.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("07")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 08.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("08")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 09.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("09")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 10.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("10")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 11.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("11")));
+        console.log("10. feladat: Volt csatlakoz\u00E1s 12.h\u00F3napban: ".concat(AdottHonapbanVoltECsatlakozasUniverzalis("12")));
+
+
+
+    </script>
+    <script src="EU_Unit.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.feladat</title>
+</head>
+
+<body>
+    <input type="text" id="mezo">
+    <button type="button" id="toggleGomb">Mutat/Elrejt</button>
+
+    <script src="jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#toggleGomb").click(function () {
+                let inputTipus = $("#mezo").attr("type");
+                if (inputTipus === "password") {
+                    $("#mezo").attr("type", "text");
+                } else {
+                    $("#mezo").attr("type", "password");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
