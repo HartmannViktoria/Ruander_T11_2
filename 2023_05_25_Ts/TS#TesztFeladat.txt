@@ -1,0 +1,12 @@
+Az alábbi feladatokhoz tartozó függvényeket, készítsd el typescript segítségével, fordítsd le JS-re, és próbálj hozzájuk Unit teszteket készíteni
+
+1)EkezetesBetukSzama(modositandoSzoveg)
+Készíts egy függvényt ami a kapott szövegben megszámolja, mennyi ékezetes betű van benne.
+
+
+2)camelCaseGenerator(modositandoSzoveg)
+Készíts egy függvényt, ami a bemenetinek kapott szövegből camelCase szöveget hoz létre!
+
+
+3) PrimLista(vizsgaltTomb)
+Készíts egy függvényt, ami kiírja melyek a prímszámok a vizsgált tömbödben, ha van ilyen, ha nincs akkor térjen vissza a "Nincs prímszám a tömbben" szöveggel
