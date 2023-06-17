@@ -65,9 +65,18 @@ function Teszt03() {
     }
 }
 
+function Teszt04() {
+    try {
+        FuggvenyVisszajelzoSor("Prímszámok a tömbben", [4,6,8], "Nincs prímszám a tömbben.", PrimLista([4,6,8]));
+    } catch {
+        HibasFuggvenyFuggvenyVisszajelzoSor("Prímszámok a tömbben", [4,6,8], "Nincs prímszám a tömbben.");
+    }
+}
+
 function TesztFuttato() {
     Teszt01();
     Teszt02();
     Teszt03();
+    Teszt04();
 }
 TesztFuttato();

@@ -19,7 +19,7 @@ function EkezetesBetukSzama(modositandoSzoveg: string): number {
 
 function camelCaseGenerator(modositandoSzoveg: string): string {
   var camelCase = '';
-  var nagybetu = true;
+  var nagybetu = false;
 
   for (let i: number = 0; i < modositandoSzoveg.length; i++) {
     var szavak = modositandoSzoveg[i];
